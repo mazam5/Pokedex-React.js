@@ -14,6 +14,8 @@ import { actions } from "./store";
 function App() {
   const [filter, setFilter] = useState(false);
   const [search, setSearch] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [modalIndex, setModalIndex] = useState();
   const pokemons = useSelector((state) => state.allPokemons);
   const dispatch = useDispatch();
 
@@ -24,10 +26,11 @@ function App() {
         const pokemonList = response.data.results;
         const pokemonDetailsPromises = pokemonList.map(async (pokemon) => {
           const detailsResponse = await axios.get(baseUrl + "/" + pokemon.name);
-          const { id, name, types } = detailsResponse.data;
+          const { id, name, types, stats } = detailsResponse.data;
           const simplifiedPokemon = {
             id,
             name,
+            stats,
             types,
           };
           const pokemonImages = await axios.get(imagesUrl + detailsResponse.data.id + ".svg");
@@ -48,7 +51,7 @@ function App() {
 
 
   return (
-    <AppContext.Provider value={{ pokemons, filter, setFilter, search, setSearch }}>
+    <AppContext.Provider value={{ pokemons, filter, setFilter, search, setSearch, modal, setModal, modalIndex, setModalIndex }}>
       <Header />
       <Filterings />
       <PokemonListing />

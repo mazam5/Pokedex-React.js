@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export default function PokemonCard(props) {
   const { pokemon } = props;
   const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
@@ -8,7 +6,7 @@ export default function PokemonCard(props) {
 
   return (
     <section className={`hover:scale-105 rounded-xl bg-gradient-to-br p-4 top-0 right-0 cursor-pointer ${id % 2 ? `from-blue-400 to-blue-800` : id % 3 ? `from-orange-400 to-orange-800` : `from-green-400 to-green-800`}`}>
-      <p className='text-white text-right md:text-3xl md:font-semibold'>{`#${id}`}</p>
+      <p className='text-white text-right md:text-3xl md:font-semibold opacity-70'>{`#${id}`}</p>
       <div>
         <svg
           viewBox="0 0 600 500"
@@ -33,7 +31,3 @@ export default function PokemonCard(props) {
     </section>
   );
 }
-
-PokemonCard.propTypes = {
-  pokemon: PropTypes.object.isRequired,
-};
