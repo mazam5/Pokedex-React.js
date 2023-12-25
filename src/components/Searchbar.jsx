@@ -17,7 +17,7 @@ export default function Searchbar() {
   }
   return <div>
     <input type="text" placeholder="Search Pokemon"
-      className="border-2 border-gray-300 rounded-md p-3 focus:outline-none focus:border-blue-400"
+      className="border-2 border-gray-300 rounded-md md:p-3 focus:outline-none focus:border-blue-400"
       value={searchString}
       onChange={handleSearch} />
   </div>;

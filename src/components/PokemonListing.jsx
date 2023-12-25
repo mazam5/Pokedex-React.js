@@ -11,7 +11,7 @@ export default function PokemonListing() {
   const filterPokemons = useSelector((state) => state.filteredPokemons);
   const searchPokemons = useSelector((state) => state.searchPokemons);
 
-  return <main className="md:mx-auto md:w-4/5 w-full my-5">
+  return <main className="md:mx-auto md:w-4/5 w-full my-5 max-sm:mx-5">
     <div className="grid md:grid-cols-5 gap-6 grid-cols-2 md:gap-10">
       {
         filter ? filterPokemons.map((pokemon, index) => (
