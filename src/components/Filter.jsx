@@ -20,7 +20,7 @@ export default function Filter() {
 
   return (
     <select
-      className="border-2 md:w-1/5 w-4/12 focus:border-blue-400 hover:border-blue-400 border-gray-300 rounded-md md:p-2 focus:outline-none"
+      className="border-2 md:w-1/5 w-1/3 focus:border-blue-400 hover:border-blue-400 border-gray-300 rounded-md md:p-2 focus:outline-none"
       onChange={handleFilter}
     >
       <optgroup>
