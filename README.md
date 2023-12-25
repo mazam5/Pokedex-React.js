@@ -19,20 +19,25 @@ This is a simple Pokedex app built with React and the [PokeAPI](https://pokeapi.
 
 ## Screenshots
 
-Loading Screen
-![Alt text](image.png)
+#### Loading Screen
 
-Infinite Scroll
-![Alt text](image-1.png)
+![Alt text](screenshots/image.png)
 
-Search Functionality
-![Alt text](image-2.png)
+#### Infinite Scroll
 
-Types Filter Functionality
-![Alt text](image-3.png)
+![Alt text](screenshots/image-1.png)
 
-Modal View Functionality
-![Alt text](image-4.png)
+#### Search Functionality
+
+![Alt text](screenshots/image-2.png)
+
+#### Types Filter Functionality
+
+![Alt text](screenshots/image-3.png)
+
+#### Modal View Functionality
+
+![Alt text](screenshots/image-4.png)
 
 ## Installation
 
