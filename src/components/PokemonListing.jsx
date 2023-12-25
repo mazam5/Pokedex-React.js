@@ -12,25 +12,25 @@ export default function PokemonListing() {
   const searchPokemons = useSelector((state) => state.searchPokemons);
 
   return <main className="md:mx-auto md:w-4/5 w-full my-5">
-    <div className="grid md:grid-cols-5 gap-6 grid-cols-2 md:gap-12">
+    <div className="grid md:grid-cols-5 gap-6 grid-cols-2 md:gap-10">
       {
         filter ? filterPokemons.map((pokemon, index) => (
           <div key={index} onClick={() => {
-            setModalIndex(index);
+            setModalIndex(pokemons.indexOf(pokemon));
             setModal(true);
           }}>
             <PokemonCard pokemon={pokemon} />
           </div>
         )) : search ? searchPokemons.map((pokemon, index) => (
           <div key={index} onClick={() => {
-            setModalIndex(index);
+            setModalIndex(pokemons.indexOf(pokemon));
             setModal(true);
           }}>
             <PokemonCard key={index} pokemon={pokemon} />
           </div>
         )) : pokemons.map((pokemon, index) => (
           <div key={index} onClick={() => {
-            setModalIndex(index);
+            setModalIndex(pokemons.indexOf(pokemon));
             setModal(true);
           }}>
             <PokemonCard pokemon={pokemon} />

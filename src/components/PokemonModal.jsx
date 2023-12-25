@@ -8,7 +8,7 @@ export default function PokemonModal(props) {
   const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-opacity-30">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-60">
       <div className="relative z-50 w-11/12 p-8 mx-auto my-3 overflow-y-auto bg-white rounded shadow-lg sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12">
         <div className="flex items-start justify-between">
           <h3 className="text-3xl font-bold text-gray-800">Pokemon Details</h3>
