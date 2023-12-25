@@ -31,11 +31,11 @@ export default function PokemonModal(props) {
         </div>
         <hr className="md:my-3 my-1" />
         <div>
-          <div className="flex md:justify-evenly flex-col">
+          <div className="flex justify-evenly">
             <p className="text-2xl font-semibold text-gray-600">{id}</p>
             <p className="text-2xl font-semibold text-gray-800">{name}</p>
           </div>
-          <div className="flex md:justify-around text-lg font-semibold text-gray-700">
+          <div className="flex justify-around text-lg font-semibold text-gray-700">
             {pokemon.types.map((type, index) => (
               <span
                 key={index}
